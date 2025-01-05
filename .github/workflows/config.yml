@@ -1,4 +1,4 @@
-name: Dummy Commit Generator
+name: Super Serious Commit Generator
 
 on:
   schedule:
@@ -17,10 +17,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Make a dummy change
-      - name: Make dummy change
+      # Make a serious change
+      - name: Make serious change
         run: |
-          echo "Dummy commit at $(date)" >> dummy_file.txt
+          echo "Serious commit at $(date)" >> serious_file.txt
 
       # Commit and push the change
       - name: Commit and push
@@ -28,7 +28,7 @@ jobs:
           git config --global user.name "Rohpat419"
           git config --global user.email "rohanblaze@hotmail.com"
           git add .
-          git commit -m "Automated dummy commit $(date)"
+          git commit -m "Automated serious commit $(date)"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
