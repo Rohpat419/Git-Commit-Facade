@@ -2,7 +2,7 @@ name: Dummy Commit Generator
 
 on:
   schedule:
-    - cron: "*/30 * * * *" # Runs every 30 minutes
+    - cron: "*/5 * * * *" # Runs every 30 minutes
     # cron syntax: 
     # min hour date-of-month month day-of-week 
     # / = step values, ? = wildcard, - = range, ,=multiple values, *=all possible matches
