@@ -6,7 +6,8 @@ on:
     # cron syntax: 
     # min hour date-of-month month day-of-week 
     # / = step values, ? = wildcard, - = range, ,=multiple values, *=all possible matches
-
+  workflow_dispatch:
+  
 jobs:
   make-commit:
     runs-on: ubuntu-latest
