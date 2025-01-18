@@ -2,7 +2,7 @@ name: Super Serious Commit Generator
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs at midnight every night
+    - cron: "0 * * * *" # Runs every hour of every day
     # cron syntax: 
     # min hour date-of-month month day-of-week 
     # / = step values, ? = wildcard, - = range, ,=multiple values, *=all possible matches
@@ -25,8 +25,8 @@ jobs:
       # Commit and push the change
       - name: Commit and push
         run: |
-          git config --global user.name "Rohpat419"
-          git config --global user.email "rohanblaze+github@hotmail.com"
+          git config --global user.name "your-github-username"
+          git config --global user.email "your-email"
           git add .
           git commit -m "Automated serious commit $(date)"
           git push
